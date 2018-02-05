@@ -124,7 +124,7 @@ public class ScriptConsoleHistory {
 	public String saveState() {
 		int size = Math.min(lines.size(), 50);
 		StringBuffer sb = new StringBuffer(size * 10);
-		for (int i = 0; i < size; i++) {
+		for (int i = lines.size() - size; i < lines.size(); i++) {
 			sb.append(lines.get(i));
 			sb.append("\n"); //$NON-NLS-1$
 		}
